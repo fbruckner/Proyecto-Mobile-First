@@ -43,3 +43,63 @@ html {
       text-align: center;
   }
   
+  .no-margin {
+    margin: 0;
+  }
+
+  /** header **/
+  @media (min-width:768px) {
+    .barra {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .site-header {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+   }
+
+   .site-header a {
+     color: white;
+     text-decoration: none;
+   }
+   .site-header h1 {
+      text-align: center;
+      font-weight: 400;
+   }
+   .site-header h1 span {
+     font-weight: 700;
+   }
+
+   /** navegacion **/
+   .navegacion a {
+     text-align: center;
+     display: block;
+     font-size: 18px;
+   }
+   @media (min-width: 768px) {
+     .navegacion a {
+       display: inline;
+       margin-right: 20px;
+     }
+   }
+
+   /** header texto **/
+   .texto-header {
+     color: white;
+     text-align: center;
+     margin-top: 50px;
+   }
+   @media (min-width: 768px) {
+     .texto-header{
+       margin-top: 150px;
+     }
+   }
+   .texto-header p{
+     font-size: 22px;
+   }
