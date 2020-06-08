@@ -15,6 +15,7 @@ html {
   /** Globales **/
   .contenedor {
       max-width: 1200px;
+      width: 95%;
       margin: 0 auto;
   }
   h1, h2, h3, h4 {
@@ -26,6 +27,7 @@ html {
   }
   h2 {
     font-size: 40px;
+    line-height: 1.2;
   }
   h3 {
     font-size: 32px;
@@ -103,3 +105,65 @@ html {
    .texto-header p{
      font-size: 22px;
    }
+
+   /** Contenido principal Home **/
+   .contenido-principal {
+     display: flex;
+     flex-wrap: wrap;
+   }
+   .blog,
+   .cursos {
+     flex-grow: 0;
+     flex-shrink: 0;
+     flex-basis: 100%;
+
+   }
+   .cursos{
+     order: -1; /** -1 hace que cursos vaya antes que blog **/
+   }
+
+   @media (min-width: 768px) {
+     .contenido-principal {
+        justify-content: space-between;
+     }
+
+     .blog {
+          flex-basis: 66.6%;
+          order: -1;
+      }
+
+     .cursos {
+          flex-basis: calc(33.3% - 40px);
+      }
+   }
+
+  /** Opcional **/
+  .entrada-blog {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e1e1e1;    
+  }
+  .entrada-blog:last-of-type { /** esto va al ultimo item y no le coloca el borde **/
+    border: none;
+  }
+
+  /** Cursos sidebar **/
+  .cursos-lista {
+    padding: 0;
+    list-style: none;
+  }
+
+  .curso {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .curso:last-of-type {
+    border-bottom: none;
+  }
+
+  .curso p {
+    font-family: "PT Sans" , sans-serif;
+    font-weight: 700;
+  }
+  .curso p span {
+    font-weight: 400;
+  }
