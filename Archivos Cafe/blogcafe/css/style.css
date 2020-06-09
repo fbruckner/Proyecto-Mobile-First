@@ -49,6 +49,34 @@ html {
     margin: 0;
   }
 
+  /** Grid **/
+  @media (min-width: 768px) {
+    .grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .centrar-columnas {
+      justify-content: center;
+    }
+    .columnas-4 {
+      flex: 0 0 calc(33.3% - 10px);
+    }
+    .columnas-6 {
+      flex: 0 0 calc(50% - 10px);
+    }
+    .columnas-8 {
+      flex: 0 0 calc(66.6% - 10px);
+    }
+    .columnas-10 {
+      flex: 0 0 calc(83.3% - 10px);
+    }
+    .columnas-12 {
+      flex: 0 0 100%;
+    }
+  }
+
+
   /** Botones **/
   .btn {
     display: block;
@@ -64,6 +92,9 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 20px;
+  }
+  .btn:hover {
+    cursor: pointer;
   }
   @media (min-width: 480px) {
     .btn {
@@ -185,6 +216,7 @@ html {
   }
 
   .curso {
+    padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #e1e1e1;
   }
@@ -215,3 +247,48 @@ html {
   .site-footer p span {
     font-weight: 700;
   }
+
+  /** Contacto **/
+  .formulario-contacto {
+    background-color: #ffffff;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  @media (min-width: 768px) {
+    .formulario-contacto {
+      margin-top: -100px;
+    }
+  }
+
+  .formulario-contacto .campo  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .formulario-contacto .campo label {
+    flex: 0 0 80px;
+  }
+  .formulario-contacto .campo input:not([type="submit"]) { /** Se aplica a todos menos al input submit / Esto hace que el casillero para completar tome todo el espacio **/
+    flex: 1;
+    border: 1px solid #e1e1e1e1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .formulario-contacto textarea {
+    flex: 1;
+    border: 1px solid #e1e1e1e1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 200px;
+  }
+  .formulario-contacto .enviar {
+    display: flex;
+    justify-content: flex-end;
+  }
+
